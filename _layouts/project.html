@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<article>
+  <div class="columns is-centered">
+    <div class="column is-11">
+      <header>
+        <h2 class="project-title title is-spaced has-text-white is-2">{{ page.title }}</h2>
+        <p class="subtitle has-text-grey">{{ page.description }}</p>
+        
+        <a class="button is-primary mt-1 mb-5" href={{page.website}} target="_blank" role="button">
+          <i class="fas fa-external-link-alt"></i>Visit the website
+        </a>
+      </header>
+      
+      <div class="project-overview mb-5">
+        <div class="browser-window">
+          <div class="browser-actions">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <img src="/assets/images/bookmarkd.png" alt="Bookmarkd">
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-8">
+          <h5 class="is-size-5">Accomplishments</h5>
+          <div class="columns">
+            <div class="column is-6">
+              <ul class="main-accomplishments">
+                {% for accomplishment in page.main_accomplishments %}
+                  {% for item in accomplishment %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="column is-6">
+              <ul class="other-accomplishments">
+                {% for accomplishment in page.other_accomplishments %}
+                  {% for item in accomplishment %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <h5 class="is-size-5">Info</h5>
+          <p>Est. time: <b>~{{ page.est_time }} months</b></p>
+      
+          <a href={{page.repository}} class="button is-light is-outlined mt-3" target="_blank">
+            <i class="fab fa-github"></i> Code
+          </a>
+        </div>
+      </div>
+      
+      {{ content }}
+    </div>
+  </div>
+</article>
