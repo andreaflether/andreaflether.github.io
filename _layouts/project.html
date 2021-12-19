@@ -21,7 +21,7 @@ layout: default
             <span></span>
             <span></span>
           </div>
-          <img src="/assets/images/bookmarkd.png" alt="Bookmarkd">
+          <img src="{{site.baseurl}}{{page.main_image}}" alt="{{page.title}}">
         </div>
       </div>
 
@@ -59,7 +59,42 @@ layout: default
         </div>
       </div>
       
-      {{ content }}
+      <h3 class="is-size-3">Overview</h3>
+
+      <blockquote>
+        <p>
+          {{ page.subtitle }}
+        </p>
+      </blockquote>
+      
+      <p class="has-text-grey-lighter">
+        {{ page.description }}
+      </p>
+      
+      <h3 class="mt-5 mb-4">Main features</h3>
+      
+      {% for feature in page.main_features %}
+        <div class="feature mb-5">
+          <h6 class="is-size-6">{{ feature['title'] }}</h6>
+          <span>{{ feature['description'] }}</span>
+        </div>
+      {% endfor %}  
+      
+      <h3 class="mt-5 mb-4">Screenshots</h3>
+
+      {% assign path = page.title | prepend: 'images/' || downcase %}
+      
+      <div class="columns is-desktop is-multiline">
+        {% for image in site.static_files %}
+          {% if image.path contains path  %}
+            <div class="column is-4">
+              <a href="{{site.baseurl}}{{image.path}}" data-lightbox="{{ page.title || downcase }}">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </article>
