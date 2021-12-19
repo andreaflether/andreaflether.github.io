@@ -6,8 +6,16 @@ end:         2021-03-09
 categories:  rails
 repository:  https://github.com/andreaflether/bookmarkd
 website:     http://bookmarkdd.herokuapp.com/
-description: Bookmarkd allows you to save tweets into folders.
+summary: Bookmarkd allows you to save tweets into folders.
+subtitle: >
+  Since Twitter only provides a single page to keep <b>all</b> your bookmarked tweets 
+  and usually, it takes forever to find a specific tweet in the middle of it all, 
+  extreme measures had to be taken. So, i present to you...
+description: >
+  <b>Bookmarkd</b>! With it, you can create as many folders as you want and add the tweets of 
+  your choice, by just pasting the tweet link :)
 est_time:    2.2
+main_image: /assets/images/bookmarkd/03_folders.png
 main_accomplishments:
   - Built with <b>Ruby on Rails</b>
   - Front-end development in <b>Bootstrap</b>
@@ -51,27 +59,3 @@ main_features:
     title: 👩‍💻  Sign up via Bookmarkd or Twitter
     description: It is possible to create an account on the site or log in via Twitter.
 ---
-
-<h3 class="is-size-3">Overview</h3>
-
-<blockquote>
-  <p>
-    Since Twitter only provides a single page to keep <b>all</b> your bookmarked tweets 
-  and usually, it takes forever to find a specific tweet in the middle of it all, 
-  extreme measures had to be taken. So, i present to you...
-  </p>
-</blockquote>
-
-<p class="has-text-grey-lighter">
-  <b>Bookmarkd</b>! With it, you can create as many folders as you want and add the tweets of 
-  your choice, by just pasting the tweet link :)
-</p>
-
-<h3 class="mt-5 mb-4">Main features</h3>
-
-{% for feature in page.main_features %}
-  <div class="feature mb-5">
-    <h6 class="is-size-6">{{ feature['title'] }}</h6>
-    <span>{{ feature['description'] }}</span>
-  </div>
-{% endfor %}  
