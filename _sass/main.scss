@@ -1,110 +1,231 @@
-$primary: #AD63BC;
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
 * {
-  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
-  background-color: #151515;
-  color: rgba(#FFF, 0.6);
+  min-height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Mono', sans-serif;
-  font-weight: 900;
-  margin-bottom: 0.65rem;
-  color: #FFF;
+body {
+  background-color: $main-bg;
+  font-family: 'Fira Code', sans-serif;
+  // overflow: hidden;
+}
+
+a, p, h1, h2, h3 {
+  color: $main-text;
+}
+
+a {
+  text-decoration: none;
+  &:hover, &:active, &:focus {
+    color: $text-visible;
+  }
+}
+
+ul, li {
+  list-style: none;
 }
 
 h1 {
-  font-size: 2.25em; 
-}
-
-h2 {
-  font-size: 1.875em;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem; 
 }
 
-h4 {
-  font-size: 1.125em;
+ul {
+  padding: 0;
+  margin: 0;
 }
 
-h5 {
-  font-size: 1em;
+section.main {
+  // overflow: auto;
+  height: calc(100vh - 8rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
 }
 
-h6 {
-  font-size: 0.875em;  
-}
+.nav {
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0;
+  background-color: $navbar-color;
+  border-top: 1px solid $navbar-border;
+  border-bottom: 1px solid $navbar-border;
 
-blockquote {
-  border-left: .25rem solid #666;
-  padding: .2rem 1rem;
-  margin: .8rem 0;
-
-  p {
-    color: rgba(#FFF, 0.5);
-  }
-}
-
-li {
-  margin: 0.4rem 0;
-}
-
-.button {
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 1.4rem 1.5rem;
-  transition: background-color 0.2s;
-
-  i {
-    margin-right: 0.45rem;
+  ul.navbar-tab {
+    display: flex;
+    align-items: center;
   }
 
-  &.is-primary {
-    background-color: $primary;
+  > a:first-child {
+    margin-left: 15px;
+  }
 
-    &:hover, &:active, &:focus {
-      background-color: darken($color: $primary, $amount: 10%);
+  li.navbar-tab-item {
+    padding: 0.9rem 0rem;
+    border-right: 1px solid $navbar-border;
+    position: relative;
+
+    &:first-child {
+      border-left: 1px solid $navbar-border;
     }
 
-    &:focus:not(:active) {
-      box-shadow: 0 0 0 0.125em rgba($primary, .25);
+    &:hover {
+      background-color: $navbar-border;
+    }
+
+    &:has(a.active) {
+      border-bottom: 3px solid $active-color;
+      top: 1px;
+    }
+
+    .active {
+      color: $text-visible;
     }
   }
 }
 
-.browser-window {
-  background-color: #252525;
-  padding: 0.75rem 0.75rem 0.5rem 0.75rem;
-  border-radius: 0.5rem;
-
-  .browser-actions {
-    display: flex; 
-    gap: 7px;
-    padding: 0 0 0.75rem 0;
-
-    span {
-      width: 15px;
-      height: 15px;
-      border-radius: 1000px;
-
-      &:nth-child(1) {
-        background-color: #DE423E;
-      }
-      &:nth-child(2) {
-        background-color: #F6B73B;
-      }
-      &:nth-child(3) {
-        background-color: #50C541;
-      }
-    }
-  }
+navbar {
+  position: relative;
+  gap: 8rem;
   
-  img {
-    width: 100%;
+
+  li.navbar-tab-item {
+    a.nav-link {
+      padding: 0.9rem 2.2rem;
+    }
+  }
+}
+
+footer {
+  color: $main-text;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  span {
+    text-align: center;
+    margin: 0 22px;
+  }
+
+  li.navbar-tab-item {
+    a.nav-link {
+      padding: 0.9rem 1.5rem;
+    }
+  }
+}
+
+.sidebar {
+  background-color: $navbar-color;
+  height: calc(100vh - 6rem);
+  width: 278px;
+  color: $main-text;
+  padding: 1rem;
+
+  .title {
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+}
+
+.level {
+  .level-title {
+    margin: 4px 0;
+  }
+  .one {
+    margin-left: 8px;
+  }
+
+  .two {
+    margin-left: 16px;
+  }
+
+  .three {
+    margin-left: 24px;
+  }
+}
+
+.mdi-language-ruby {
+  color: #f44336;
+}
+
+.mdi-react {
+  color: #00bcd4;
+}
+
+.mdi-language-javascript {
+  color: #ffca28
+}
+
+.mdi-git {
+  color: #e64a19;
+}
+
+.mdi-code-tags {
+  color: #e44d26
+}
+
+.mdi-folder {
+  color: #42a5f5;
+}
+
+.mdi-database, .mdi-sass {
+  color: #ec407a;
+}
+
+.container {
+  display: flex;
+  // flex-wrap: wrap;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+
+  .project {
+    background-color: $card-bg;
+    border: 1px solid $navbar-border;
+    border-radius: 15px;
+    height: 150px; 
+
+    .project-number {
+      margin-right: 7px;
+    }
+
+    .project-info {
+      display: flex;
+      align-items: center
+    }
+
+    .card-body {
+      margin: 20px 0;
+    }
+
+    .btn {
+      background-color: $btn;
+      padding: 10px 14px;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: rgba($btn, 0.9); 
+      }
+    }
   }
 }

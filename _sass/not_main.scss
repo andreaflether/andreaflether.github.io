@@ -1,0 +1,110 @@
+$primary: #AD63BC;
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  background-color: #151515;
+  color: rgba(#FFF, 0.6);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 900;
+  margin-bottom: 0.65rem;
+  color: #FFF;
+}
+
+h1 {
+  font-size: 2.25em; 
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.125em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.875em;  
+}
+
+blockquote {
+  border-left: .25rem solid #666;
+  padding: .2rem 1rem;
+  margin: .8rem 0;
+
+  p {
+    color: rgba(#FFF, 0.5);
+  }
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+.button {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1.4rem 1.5rem;
+  transition: background-color 0.2s;
+
+  i {
+    margin-right: 0.45rem;
+  }
+
+  &.is-primary {
+    background-color: $primary;
+
+    &:hover, &:active, &:focus {
+      background-color: darken($color: $primary, $amount: 10%);
+    }
+
+    &:focus:not(:active) {
+      box-shadow: 0 0 0 0.125em rgba($primary, .25);
+    }
+  }
+}
+
+.browser-window {
+  background-color: #252525;
+  padding: 0.75rem 0.75rem 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+
+  .browser-actions {
+    display: flex; 
+    gap: 7px;
+    padding: 0 0 0.75rem 0;
+
+    span {
+      width: 15px;
+      height: 15px;
+      border-radius: 1000px;
+
+      &:nth-child(1) {
+        background-color: #DE423E;
+      }
+      &:nth-child(2) {
+        background-color: #F6B73B;
+      }
+      &:nth-child(3) {
+        background-color: #50C541;
+      }
+    }
+  }
+  
+  img {
+    width: 100%;
+  }
+}

@@ -6,23 +6,52 @@
 
   <title>{{ page.title }}</title>
   <link rel="shortcut icon" href="/assets/images/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
-  <section class="section">
-    <div class="container">
-      {{ content }}
-    </div>
+  <navbar class="nav" role="navigation" aria-label="main navigation">
+    <a class="main navbar-brand" href="/">andrea_alencar</a>
+
+    <ul class="navbar-tab">
+      <li class="navbar-tab-item">
+        <a href="/" class="nav-link {% if page.layout == 'home' %} active{% endif %}">_hello</a>
+      </li>
+      <li class="navbar-tab-item">
+        <a href="/about" class="nav-link {% if page.layout == 'about' %} active{% endif %}">_about-me</a>
+      </li>
+      <li class="navbar-tab-item">
+        <a href="/projects" class="nav-link {% if page.layout == 'projects' %} active{% endif %}">_projects</a>
+      </li>
+    </ul>
+  </navbar>
+
+  <section>
+    {{content}}
   </section>
+
+  <footer class="nav">
+    <span>
+      find me in:
+    </span>
+
+    <ul class="navbar-tab">
+      <li class="navbar-tab-item">
+        <a href="https://github.com/andreaflether" title="Github profile" class="nav-link" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      <li class="navbar-tab-item">
+        <a href="https://www.linkedin.com/in/andrea-alencar/" title="LinkedIn profile" class="nav-link" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    </ul>
+  </footer>
 </body>
 </html>
