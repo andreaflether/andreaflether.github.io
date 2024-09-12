@@ -6,7 +6,7 @@ end:         2021-08-05
 categories:  rails
 repository:  https://github.com/andreaflether/questz
 website:     http://questz.herokuapp.com/
-summary: Ask and answer questions on various topics!
+subtitle: Share & grow the world's knowledge!
 description: >
   A website that allows users to ask and answer questions on various topics!
   Very much a forum-like type of site, where you can interact with other users, follow tags,
@@ -21,7 +21,6 @@ main_accomplishments:
     Online forum with <b>Users</b> (Devise), <b>Questions</b>, <b>Answers</b>, 
     <b>Reports</b> and <b>Tags</b> (ActsAsTaggableOn)
   - Backoffice administration (for Admins and Moderators)
-other_accomplishments:
   - Social media features - like/unlike, follow and notifications
   - Report system that allows the user to report a question or a answer
   - Custom URLs (Stringex)
@@ -68,11 +67,11 @@ main_features:
     title: ⚙️ Moderation
     description: >
       <ul>
-        <li>• Questz has a complete moderation panel to watch user activity, including Questions, Answers, 
+        <li>Questz has a complete moderation panel to watch user activity, including Questions, Answers, 
           Reports, Tags and Users.</li> 
-        <li>• In the Questions/Answers panel there is also a tool to watch for restricted words and make 
+        <li>In the Questions/Answers panel there is also a tool to watch for restricted words and make 
           the moderation job easier.</li> 
-        <li>• There is a "strike" system too. If a user has 3 strikes, he is automatically banned 
+        <li>There is a "strike" system too. If a user has 3 strikes, he is automatically banned 
           from the website. Users receive warning and can, at any time, see how many strikes they have.</li>
       </ul>
   - eight:
@@ -85,9 +84,9 @@ main_features:
     description: > 
       <b>In Questz, it is possible to: </b><br />
       <ul>
-        <li>• Share a question or answer in WhatsApp, Twitter, Facebook, LinkedIn or Email. <br /></li>
-        <li>• Like a question or a answer. <br /></li>
-        <li>• Follow a tag. <br /></li>
-        <li>• See user activity in their profile page.</li>
+        <li>Share a question or answer in WhatsApp, Twitter, Facebook, LinkedIn or Email. <br /></li>
+        <li>Like a question or a answer. <br /></li>
+        <li>Follow a tag. <br /></li>
+        <li>See user activity in their profile page.</li>
       </ul>
 ---

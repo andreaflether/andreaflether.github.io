@@ -1,17 +1,15 @@
 ---
-layout: default
+layout: page
 ---
-
 <article>
   <div class="columns is-centered">
     <div class="column is-11">
       <header>
-        <h2 class="project-title title is-spaced has-text-white is-2">{{ page.title }}</h2>
+        <h1 class="project-title title is-spaced has-text-white is-2">{{ page.title }}</h1>
+        <blockquote>
+          {{ page.subtitle }}
+        </blockquote>
         <p class="subtitle has-text-grey">{{ page.description }}</p>
-        
-        <a class="button is-primary mt-1 mb-5" href={{page.website}} target="_blank" role="button">
-          <i class="fas fa-external-link-alt"></i>Visit the website
-        </a>
       </header>
       
       <div class="project-overview mb-5">
@@ -23,11 +21,21 @@ layout: default
           </div>
           <img src="{{site.baseurl}}{{page.main_image}}" alt="{{page.title}}">
         </div>
+        
+        <div class="actions">
+          <a class="button" href={{page.website}} target="_blank" role="button">
+            <i class="fas fa-external-link-alt"></i>Visit the website
+          </a>
+
+          <a href={{page.repository}} class="button is-white" target="_blank">
+            <i class="fab fa-github"></i> Code
+          </a>
+        </div>
       </div>
 
       <div class="columns">
         <div class="column is-8">
-          <h5 class="is-size-5">Accomplishments</h5>
+          <h3 class="is-size-5">Accomplishments</h3>
           <div class="columns">
             <div class="column is-6">
               <ul class="main-accomplishments">
@@ -50,32 +58,17 @@ layout: default
           </div>
         </div>
         <div class="column is-4">
-          <h5 class="is-size-5">Info</h5>
-          <p>Est. time: <b>~{{ page.est_time }} months</b></p>
-      
-          <a href={{page.repository}} class="button is-light is-outlined mt-3" target="_blank">
-            <i class="fab fa-github"></i> Code
-          </a>
+          <p>Estimated time of development: <b>~{{ page.est_time }} months</b></p>
         </div>
       </div>
       
       <h3 class="is-size-3">Overview</h3>
 
-      <blockquote>
-        <p>
-          {{ page.subtitle }}
-        </p>
-      </blockquote>
-      
-      <p class="has-text-grey-lighter">
-        {{ page.description }}
-      </p>
-      
       <h3 class="mt-5 mb-4">Main features</h3>
       
       {% for feature in page.main_features %}
         <div class="feature mb-5">
-          <h6 class="is-size-6">{{ feature['title'] }}</h6>
+          <h4 class="is-size-6">{{ feature['title'] }}</h4>
           <span>{{ feature['description'] }}</span>
         </div>
       {% endfor %}  

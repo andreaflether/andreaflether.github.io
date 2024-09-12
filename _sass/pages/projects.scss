@@ -1,0 +1,82 @@
+.browser-window {
+  background-color: #252525;
+  padding: 0.75rem 0.75rem 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+
+  .browser-actions {
+    display: flex; 
+    gap: 7px;
+    padding: 0 0 0.75rem 0;
+
+    span {
+      width: 15px;
+      height: 15px;
+      border-radius: 1000px;
+
+      &:nth-child(1) {
+        background-color: #DE423E;
+      }
+      &:nth-child(2) {
+        background-color: #F6B73B;
+      }
+      &:nth-child(3) {
+        background-color: #50C541;
+      }
+    }
+  }
+  
+  img {
+    width: 100%;
+  }
+}
+
+.button {
+  border: transparent;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 3px;
+  align-items: center;
+  position: relative;
+  vertical-align: top;
+  text-align: center;
+  
+  background-color: $delta;
+  color: $zeta;
+  font-weight: bold;
+
+  svg {
+    margin-right: 8px;
+  }
+}
+
+.button.is-white {
+  border: 1px solid $zeta !important;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $zeta !important;
+    color: $omega;
+    transition: all 0.3s;
+  }
+}
+
+.actions {
+  a:last-child {
+    margin-left: 5px;
+  }
+
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+}
+
+blockquote {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-color: #333;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  display: block;
+  margin: 16px 0;
+}

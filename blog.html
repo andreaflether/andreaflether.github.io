@@ -1,0 +1,18 @@
+---
+layout: page
+title: Blog
+---
+<section class="list">
+	{% if site.posts.size == 0 %}
+		<p class="text-center">Nothing published yet!</p>
+	{% else %}
+		{% for post in site.posts %}
+			{% if post.category == 'blog' %}
+				{% if post.hidden != true %}
+					{% assign last_blog_post = forloop.last %}
+					{% include blog-post.html last_blog_post=last_blog_post %}
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+</section>

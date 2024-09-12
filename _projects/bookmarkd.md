@@ -12,9 +12,8 @@ description: >
   and usually, it takes forever to find a specific tweet in the middle of it all, 
   so, Bookmarkd allows you to save to save your tweets into folders, so you can
   keep things organized and easy to find.
-description: >
-  <b>Bookmarkd</b>! With it, you can create as many folders as you want and add the tweets of 
-  your choice, by just pasting the tweet link :)
+subtitle: >
+  Organize your Twitter bookmarks effortlessly!
 est_time:    2.2
 main_image: /assets/images/bookmarkd/03_folders.png
 logo: /assets/images/bookmarkd/logo.svg
@@ -22,7 +21,6 @@ main_accomplishments:
   - Built with <b>Ruby on Rails</b>
   - Front-end development in <b>Bootstrap</b>
   - User authentication with <b>Devise</b> or <b>Twitter OAuth</b>
-other_accomplishments:
   - Tweet/Folders actions via <b>AJAX</b>
   - <b>Dark/light</b> themes
   - JS <b>Masonry</b> layout and filtering
