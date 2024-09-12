@@ -115,3 +115,5 @@ collections:
   projects:
     output: true
     permalink: /:collection/:title
+
+include: [".well-known"]
