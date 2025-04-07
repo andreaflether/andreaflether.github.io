@@ -1,3 +1,19 @@
+---
+title: "How Rails’ .to_query can simplify your URL parameters"
+layout: post
+date: 2025-04-07 20:45
+headerImage: false
+tag:
+- rails
+- to_query
+- active-support
+- query-strings
+star: false
+category: blog
+author: andreaflether
+description: Learn how the .to_query method simplifies building query strings with real-world examples and structured parameter wrapping.
+---
+
 # How Rails’ .to_query Can Simplify Your URL Parameters
 
 When working with web applications, you often need to convert data structures into URL query strings. This is where Rails' `.to_query` method shines! It's a handy method that turns a hash (or other object types) into a properly escaped query string you can use in URLs. 
